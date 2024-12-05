@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,9 +6,13 @@ using UnityEngine;
 
 public class npc : MonoBehaviour
 {
-    public void Interactuar()
+    [SerializeField] float duracionRotacion;
+    public void Interactuar(Transform interactuador)
     {
+
         Debug.Log("Hola viajero.");
+
+        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y);
     }
 
     // Start is called before the first frame update
