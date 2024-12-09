@@ -3948,7 +3948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hola viajero, que puedo hacer por ti en esta hermosa mazmorra?
+  m_text: asdasdasdasdasdasdadasdasdasdasasdasdasdasdasdasdasdasdasdasdasdasdasasdasdasdasdasdasdasdasdasdasdadsasdasd
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e0f7387dd47e3343ba642210a7c13f2, type: 2}
   m_sharedMaterial: {fileID: 8323540678734543386, guid: 1e0f7387dd47e3343ba642210a7c13f2,
@@ -6226,11 +6226,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1131884015}
-  m_Father: {fileID: 1050525238}
+  m_Father: {fileID: 1877003777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13000001, y: 0.2785176}
   m_AnchorMax: {x: 0.13000001, y: 0.2785176}
-  m_AnchoredPosition: {x: 216.379, y: 87.32004}
+  m_AnchoredPosition: {x: 83.552246, y: 155.22156}
   m_SizeDelta: {x: 265, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712051623
@@ -9194,8 +9194,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 712051622}
-  - {fileID: 1794848175}
+  - {fileID: 1877003777}
   m_Father: {fileID: 1481906261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14204,18 +14203,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794848174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1887014583}
-  m_Father: {fileID: 1050525238}
+  m_Father: {fileID: 1877003777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 175}
-  m_SizeDelta: {x: -500, y: 250}
+  m_AnchoredPosition: {x: 438.26047, y: 124.999985}
+  m_SizeDelta: {x: 1043.479, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794848176
 MonoBehaviour:
@@ -14729,6 +14728,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1869707496}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1877003776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877003777}
+  m_Layer: 5
+  m_Name: Marcos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1877003777
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877003776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 712051622}
+  - {fileID: 1794848175}
+  m_Father: {fileID: 1050525238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -438.26044, y: -161.65903}
+  m_SizeDelta: {x: 376.52087, y: 464.6289}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1887014582
 GameObject:
   m_ObjectHideFlags: 0
@@ -15708,6 +15744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duracionRotacion: 2
+  miDialogo: {fileID: 11400000, guid: c89ef826e9cc33047bded263475c49f8, type: 2}
 --- !u!1001 &1979708252
 PrefabInstance:
   m_ObjectHideFlags: 0
