@@ -12,17 +12,26 @@ public class SistemaPatrulla : MonoBehaviour
     List<Vector3> ListadoPuntos = new List<Vector3>();
 
 
-    int indiceActual;//Marca el punto al cual debo ir.
+    int indiceActual=-1;//Marca el punto al cual debo ir.
+
     Vector3 destinoActual;
+    [SerializeField] Enemigo main;
+
+    [SerializeField] float velocidadPatrulla;
 
     private void Awake()
     {
+        main.Patrulla= this;
         //m_Agent = GetComponent<NavMeshAgent>();
         foreach (Transform puntos in ruta)
         {
             //Añado todos los puntos de ruta al listado.
             ListadoPuntos.Add(puntos.position);
         }
+    }
+    private void OnEnable()
+    {
+        m_Agent.speed = velocidadPatrulla;
     }
     // Start is called before the first frame update
     void Start()
@@ -58,5 +67,13 @@ public class SistemaPatrulla : MonoBehaviour
         }
         //Mi destino es dentro del listado de puntos aquel con el nuevo indice calculado.
         destinoActual = ListadoPuntos[indiceActual];
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            main.activarcombate(other.transform);
+            StopAllCoroutines();
+        }
     }
 }
