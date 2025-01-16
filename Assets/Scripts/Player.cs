@@ -79,4 +79,9 @@ public class Player : MonoBehaviour
             agent.stoppingDistance = distanciaParadoBase;
         }
     }
+
+    public void HacerDanho(float danhoAtaque)
+    {
+        Debug.Log("Me hacen pupa" + danhoAtaque);
+    }
 }

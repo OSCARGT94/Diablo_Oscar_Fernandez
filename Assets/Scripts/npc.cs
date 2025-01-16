@@ -4,10 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class npc : MonoBehaviour
+public class npc : MonoBehaviour, IIinteractuable
 {
     [SerializeField] float duracionRotacion;
     [SerializeField] DialogoSO miDialogo;
+
+    public void Interactuable()
+    {
+        throw new NotImplementedException();
+    }
+
     public void Interactuar(Transform interactuador)
     {
 
@@ -31,4 +37,5 @@ public class npc : MonoBehaviour
     {
         
     }
+
 }

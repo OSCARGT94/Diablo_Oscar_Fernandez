@@ -32,11 +32,14 @@ public class SistemaPatrulla : MonoBehaviour
     private void OnEnable()
     {
         m_Agent.speed = velocidadPatrulla;
+        m_Agent.stoppingDistance = 0;
+        //indiceActual = -1;
+        StartCoroutine(patrullarYesperar());
+
     }
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(patrullarYesperar());
     }
 
     // Update is called once per frame
