@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogo2
   m_EditorClassIdentifier: 
   frases:
-  - sdfsdfsd
-  - sdfsdfs
-  - sdfsdfsdfs
+  - Hola aventurero, te esperan grandes aventuras.
+  - Neceisto que encuentres unas setas malvadas, para curar la artrosis de mi abuela.
+  - Gracias aventurero.
   tiempoEntreLetras: 0.02
