@@ -4,14 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class npc : MonoBehaviour
+public class npc : MonoBehaviour, IInteractable
 {
     [SerializeField] float duracionRotacion;
     [SerializeField] DialogoSO miDialogo;
 
     
 
-    public void Interactuar(Transform interactuador)
+    public void interactuar(Transform interactuador)
     {
 
         Debug.Log("Hola viajero.");

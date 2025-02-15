@@ -17,3 +17,5 @@ MonoBehaviour:
   - Neceisto que encuentres unas setas malvadas, para curar la artrosis de mi abuela.
   - Gracias aventurero.
   tiempoEntreLetras: 0.02
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: 1ec6abf9dd06c024bb2521f2c297eda2, type: 2}

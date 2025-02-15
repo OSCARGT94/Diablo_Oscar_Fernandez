@@ -11,12 +11,12 @@ public class ToggleMision : MonoBehaviour
 
     Toggle togglerVisual;
 
-    public TMP_Text TextoMison { get => textoMison;}
-    public Toggle TogglerVisual { get => togglerVisual;}
+    public TMP_Text TextoMison { get => textoMison; set => textoMison = value; }
+    public Toggle TogglerVisual { get => togglerVisual; set => togglerVisual = value; }
 
     private void Awake()
     {
-        togglerVisual = GetComponent<Toggle>(); 
+        togglerVisual = GetComponent<Toggle>();
     }
 
 }

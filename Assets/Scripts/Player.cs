@@ -3,9 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
+
+
 {
+
+    public Image barritadeVIda;
+
+    public float vidaActual;
+
+    public float vidaMaxima;
+
     Camera cam;
     NavMeshAgent agent;
     [SerializeField]float distanciaDeParado;
@@ -28,7 +38,7 @@ public class Player : MonoBehaviour
             Movimiento();
         }
         ComprobarInteracion();
-
+        barritadeVIda.fillAmount = vidaActual / vidaMaxima;
 
     }
 
@@ -64,7 +74,7 @@ public class Player : MonoBehaviour
             //Saber si hemos llegado.
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
-                npc.Interactuar(transform);
+                npc.interactuar(transform);
 
                 //Me olvido de cual fue el ultimo click, porque solo quiero interactuar una vez.
                 ultimoClick = null;
@@ -83,5 +93,6 @@ public class Player : MonoBehaviour
     public void HacerDanho(float danhoAtaque)
     {
         Debug.Log("Me hacen pupa" + danhoAtaque);
+        vidaActual -= danhoAtaque;
     }
 }

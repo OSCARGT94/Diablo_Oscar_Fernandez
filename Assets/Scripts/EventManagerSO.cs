@@ -6,9 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="EventManager")]
 public class EventManagerSO : ScriptableObject
 {
-    public event Action<MisionSO> OnNuevaMIsion;
-    internal void NuevaMIsion(MisionSO mision)
+    public event Action<MisionSO> OnNuevaMision;
+    public void NuevaMision(MisionSO mision)
     {
-        OnNuevaMIsion?.Invoke(mision);
+        OnNuevaMision?.Invoke(mision);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,19 @@ public class SistemaMisiones : MonoBehaviour
 
     private void OnEnable()
     {
-        eventManager.OnNuevaMIsion += EncenderToggleMIsion;
+        eventManager.OnNuevaMision += EncenderToggleMision;
     }
 
-    private void EncenderToggleMIsion(MisionSO mision)
+    private void EncenderToggleMision(MisionSO mision)
     {
-        
+        togglesMision[mision.indiceMision].TextoMison.text = mision.ordenInicial;
+
+        if (mision.tieneRepeticion)
+        {
+            togglesMision[mision.indiceMision].TextoMison.text += "(" + mision.repeticionActual + "/" + mision.totalRepeteciones + ")";
+        }
+
+        togglesMision[mision.indiceMision].gameObject.SetActive(true);
     }
 
     // Start is called before the first frame update
