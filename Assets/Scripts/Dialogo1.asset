@@ -19,3 +19,5 @@ MonoBehaviour:
   - Necesito que me hagas un encargo, porque mi abuela se ha puesto enferma.
   - Necesito que me busques unas hierbas medicinales para curarla.
   tiempoEntreLetras: 0.02
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: 1ec6abf9dd06c024bb2521f2c297eda2, type: 2}

@@ -8,6 +8,7 @@ public class sistemaDialogos : MonoBehaviour
     //Patron Single-ton:
     //1.Sólo existe una única instancia de sistemaDialogos.
     //2.Es accesible DESDE CUALQUIER PUNTO del programa.
+    [SerializeField] EventManagerSO eventManager;
 
     [SerializeField] GameObject marcoDialogo;
 
@@ -109,6 +110,11 @@ public class sistemaDialogos : MonoBehaviour
         marcoDialogo.SetActive(false); //Cerramos el marco de dialogo actual.
         indiciFraseActual = 0; //Para volver a empezar desde cero la proxima vez.
         escribiendo = false;
+        if (dialogoActual.tieneMision)
+        {
+
+        }
+
         dialogoActual = null; //Ya no tengo dialogo que escribir.
 
         Time.timeScale = 1;

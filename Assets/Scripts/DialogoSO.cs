@@ -9,6 +9,7 @@ public class DialogoSO : ScriptableObject
     public string[] frases;
     public float tiempoEntreLetras;
 
-
+    public bool tieneMision;
+    public MisionSO mision;
 
 }
