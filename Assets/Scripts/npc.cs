@@ -8,6 +8,8 @@ public class npc : MonoBehaviour, IIinteractuable
 {
     [SerializeField] float duracionRotacion;
     [SerializeField] DialogoSO miDialogo;
+    [SerializeField] Transform cameraPoint;
+
 
     public void Interactuable()
     {
