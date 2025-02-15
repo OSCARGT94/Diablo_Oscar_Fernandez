@@ -25,7 +25,7 @@ public class npc : MonoBehaviour, IIinteractuable
     }
     void IniciarInteraccion()
     {
-        sistemaDialogos.sistema.IniciarDialogo(miDialogo);
+        sistemaDialogos.sistema.IniciarDialogo(miDialogo, cameraPoint);
     }
 
     // Start is called before the first frame update
