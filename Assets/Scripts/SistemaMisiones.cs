@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class SistemaMisiones : MonoBehaviour
 {
+    [SerializeField] EventManagerSO eventManager;
+    [SerializeField] GameObject[] togglesMision;
+
+    private void OnEnable()
+    {
+        eventManager.OnNuevaMIsion += EncenderToggleMIsion;
+    }
+
+    private void EncenderToggleMIsion()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
