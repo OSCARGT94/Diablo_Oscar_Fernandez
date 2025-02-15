@@ -5,14 +5,14 @@ using UnityEngine;
 public class SistemaMisiones : MonoBehaviour
 {
     [SerializeField] EventManagerSO eventManager;
-    [SerializeField] GameObject[] togglesMision;
+    [SerializeField] ToggleMision[] togglesMision;
 
     private void OnEnable()
     {
         eventManager.OnNuevaMIsion += EncenderToggleMIsion;
     }
 
-    private void EncenderToggleMIsion()
+    private void EncenderToggleMIsion(MisionSO mision)
     {
         
     }

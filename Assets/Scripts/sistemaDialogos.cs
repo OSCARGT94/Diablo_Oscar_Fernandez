@@ -112,7 +112,7 @@ public class sistemaDialogos : MonoBehaviour
         escribiendo = false;
         if (dialogoActual.tieneMision)
         {
-            eventManager.NuevaMIsion();
+            eventManager.NuevaMIsion(dialogoActual.mision);
         }
 
         dialogoActual = null; //Ya no tengo dialogo que escribir.
