@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     }
     private void ComprobarInteracion()
     {
-        if (ultimoClick != null && ultimoClick.TryGetComponent( out npc npc))
+        if (ultimoClick != null && ultimoClick.TryGetComponent( out IInteractable interactable))
         {
             //Actualizo distancia de parada paa nop comerme al npc.
             agent.stoppingDistance = distanciaDeParado;
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
             //Saber si hemos llegado.
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
-                npc.interactuar(transform);
+                interactable.interactuar(transform);
 
                 //Me olvido de cual fue el ultimo click, porque solo quiero interactuar una vez.
                 ultimoClick = null;

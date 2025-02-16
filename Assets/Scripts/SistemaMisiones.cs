@@ -11,7 +11,12 @@ public class SistemaMisiones : MonoBehaviour
     private void OnEnable()
     {
         eventManager.OnNuevaMision += EncenderToggleMision;
+        eventManager.OnActualizarMision += ActualizarTOggleMision;
+        eventManager.OnTerminarMision += TermianrToggleMision;
+
     }
+
+
 
     private void EncenderToggleMision(MisionSO mision)
     {
@@ -25,15 +30,16 @@ public class SistemaMisiones : MonoBehaviour
         togglesMision[mision.indiceMision].gameObject.SetActive(true);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void ActualizarTOggleMision(MisionSO mision)
     {
-        
+        togglesMision[mision.indiceMision].TextoMison.text = mision.ordenInicial;
+        togglesMision[mision.indiceMision].TextoMison.text += "(" + mision.repeticionActual + "/" + mision.totalRepeteciones + ")";
     }
 
-    // Update is called once per frame
-    void Update()
+    private void TermianrToggleMision(MisionSO mision)
     {
-        
+        togglesMision[mision.indiceMision].TogglerVisual.isOn = true;
+        togglesMision[mision.indiceMision].TextoMison.text = mision.ordenFinal;
     }
+
 }

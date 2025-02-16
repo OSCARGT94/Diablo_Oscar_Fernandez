@@ -6,10 +6,37 @@ using UnityEngine;
 
 public class npc : MonoBehaviour, IInteractable
 {
-    [SerializeField] float duracionRotacion;
-    [SerializeField] DialogoSO miDialogo;
 
-    
+    [SerializeField] EventManagerSO evntmanager;
+
+    [SerializeField] MisionSO miMision;
+
+    [SerializeField] float duracionRotacion;
+    [SerializeField] DialogoSO miDialogo1;
+    [SerializeField] DialogoSO miDialogo2;
+
+    DialogoSO DialogoActual;
+    private void OnEnable()
+    {
+        evntmanager.OnTerminarMision += CambiarDialogo;
+    }
+    private void OnDisable()
+    {
+        evntmanager.OnTerminarMision -= CambiarDialogo;
+    }
+
+    private void CambiarDialogo(MisionSO misionTerminada)
+    {
+        if (miMision == misionTerminada)
+        {
+            DialogoActual = miDialogo2;
+        }
+    }
+
+    private void Awake()
+    {
+        DialogoActual = miDialogo1;
+    }
 
     public void interactuar(Transform interactuador)
     {
@@ -20,7 +47,7 @@ public class npc : MonoBehaviour, IInteractable
     }
     void IniciarInteraccion()
     {
-        sistemaDialogos.sistema.IniciarDialogo(miDialogo);
+        sistemaDialogos.sistema.IniciarDialogo(DialogoActual);
     }
 
     // Start is called before the first frame update

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dd8ed3054040543ba9f02fdc2fe81f, type: 3}
   m_Name: MIsion1
   m_EditorClassIdentifier: 
-  ordenInicial: Encuentras las tres setas de la muerte (0/3)
+  ordenInicial: Encuentra las setas traviesas
   ordenFinal: Vuelve con Gimbli.
   tieneRepeticion: 1
   totalRepeteciones: 3

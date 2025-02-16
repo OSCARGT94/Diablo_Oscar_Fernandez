@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,5 +13,6 @@ public class MisionSO : ScriptableObject
     public int totalRepeteciones;
     public int indiceMision;
 
+    [NonSerialized]
     public int repeticionActual;
 }
