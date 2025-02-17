@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public GameObject GolpeadorTriguer;
 
+    [SerializeField] GameObject canvasPausa;
+
     public Image barritadeVIda;
 
     public float vidaActual;
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
         golpeado = 0;
         cam = Camera.main;
         agent = GetComponent<NavMeshAgent>();
+        canvasPausa.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,7 +46,20 @@ public class Player : MonoBehaviour
         ComprobarInteracion();
         barritadeVIda.fillAmount = vidaActual / vidaMaxima;
 
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvasPausa.SetActive(!canvasPausa.activeSelf);
+            if (canvasPausa.activeSelf)
+            {
+                Time.timeScale = 0.2f;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
 
     }
       
