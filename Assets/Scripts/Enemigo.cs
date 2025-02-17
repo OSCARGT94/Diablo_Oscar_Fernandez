@@ -42,6 +42,7 @@ public class Enemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        vidaActual = 100;
         golpeadoEnemigo = 0;
         patrulla.enabled = true;
     }
