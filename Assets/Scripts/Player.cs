@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
-
-
 {
+    
 
     public Image barritadeVIda;
 
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         cam = Camera.main;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -40,8 +41,10 @@ public class Player : MonoBehaviour
         ComprobarInteracion();
         barritadeVIda.fillAmount = vidaActual / vidaMaxima;
 
-    }
+        
 
+    }
+      
 
     private void Movimiento()
     {
@@ -95,4 +98,5 @@ public class Player : MonoBehaviour
         Debug.Log("Me hacen pupa" + danhoAtaque);
         vidaActual -= danhoAtaque;
     }
+    
 }
