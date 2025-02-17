@@ -13,6 +13,7 @@ public class SistemaCombate : MonoBehaviour
     [SerializeField] float distanciaDeAtaque;
     [SerializeField] float danhoAtaque;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject golpeadorSaltador;
     private void Awake()
     {
         main.Combate = this;
@@ -72,10 +73,13 @@ public class SistemaCombate : MonoBehaviour
     {
         //Hacer daño al target.
         main.Target.GetComponent<Player>().HacerDanho(danhoAtaque);
+        golpeadorSaltador.SetActive(true);
+
     }
     void FinAnimacionAtaque()
     {
         animator.SetBool("Attack", false);
+        golpeadorSaltador.SetActive(false);
     }
     #endregion
 }

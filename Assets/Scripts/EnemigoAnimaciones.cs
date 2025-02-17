@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemigoAnimaciones : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
+    [SerializeField] Enemigo enemigo;
     Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,7 @@ public class EnemigoAnimaciones : MonoBehaviour
     {
         //actualizo el parametro velovidad en funcion de la velocidad del agente.
         anim.SetFloat("Velocity", agent.velocity.magnitude / agent.speed);
+
+        
     }
 }

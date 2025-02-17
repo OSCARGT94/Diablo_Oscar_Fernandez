@@ -8,13 +8,15 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    
+    [SerializeField] public GameObject GolpeadorTriguer;
 
     public Image barritadeVIda;
 
     public float vidaActual;
 
     public float vidaMaxima;
+
+    public int golpeado;
 
     Camera cam;
     NavMeshAgent agent;
@@ -26,7 +28,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        golpeado = 0;
         cam = Camera.main;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -97,6 +99,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Me hacen pupa" + danhoAtaque);
         vidaActual -= danhoAtaque;
+        golpeado++;
     }
     
 }

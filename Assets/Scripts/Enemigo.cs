@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemigo : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class Enemigo : MonoBehaviour
     SistemaCombate combate;
     Transform target;
 
-    
+    public Image barritadeVIda;
+
+    public float vidaActual;
+
+    public float vidaMaxima;
 
     public SistemaPatrulla Patrulla { get => patrulla; set => patrulla = value; }
     public SistemaCombate Combate { get => combate; set => combate = value; }
@@ -40,6 +45,14 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        barritadeVIda.fillAmount = vidaActual / vidaMaxima;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GolpeEspada"))
+        {
+            vidaActual -= 10;
+        }
+    }
+
 }

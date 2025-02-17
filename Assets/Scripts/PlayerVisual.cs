@@ -8,13 +8,14 @@ public class PlayerVisual : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Player player;
+    int golpeadoactual;
      Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        golpeadoactual = 0;
 
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,9 +27,31 @@ public class PlayerVisual : MonoBehaviour
         {
             anim.SetBool("Muerte", true);
         }
+        
+        if (player.golpeado > golpeadoactual && player.vidaActual>0)
+        {
+            
+            anim.SetTrigger("Golpeado");
+
+            golpeadoactual++;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("Atacar");
+        }
+
+
     }
     public void CambioEscena()
     {
         SceneManager.LoadScene("GameOver");
+    }
+    public void IniciarGolpe()
+    {
+        player.GolpeadorTriguer.SetActive(true);
+    }
+    public void AcabarGolpe()
+    {
+        player.GolpeadorTriguer.SetActive(false);
     }
 }
