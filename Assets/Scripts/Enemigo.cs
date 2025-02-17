@@ -16,6 +16,8 @@ public class Enemigo : MonoBehaviour
 
     public float vidaMaxima;
 
+    public int golpeadoEnemigo;
+
     public SistemaPatrulla Patrulla { get => patrulla; set => patrulla = value; }
     public SistemaCombate Combate { get => combate; set => combate = value; }
     public Transform Target { get => target; set => target = value; }
@@ -39,6 +41,7 @@ public class Enemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        golpeadoEnemigo = 0;
         patrulla.enabled = true;
     }
 
@@ -52,6 +55,7 @@ public class Enemigo : MonoBehaviour
         if (other.CompareTag("GolpeEspada"))
         {
             vidaActual -= 10;
+            golpeadoEnemigo++;
         }
     }
 
