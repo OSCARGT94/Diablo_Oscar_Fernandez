@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Dialogo1
   m_EditorClassIdentifier: 
   frases:
-  - 'Hola viajero, que puedo hacer por ti en esta hermosa mazmorra?
-
-    (coff, coff...).'
-  - Necesito que me hagas un encargo, porque mi abuela se ha puesto enferma.
-  - Necesito que me busques unas hierbas medicinales para curarla.
+  - "Hola viajero, me perd\xED buscando unas setas para mi abuela en esta mazmorra?\n(coff,
+    coff...)."
+  - "\xBFPodrias buscarlas por mi?, mi abuela se ha puesto mu enferma."
+  - "Son solo tres y tienen una pinta muy reconocible, muchas gracias, te estare
+    aqu\xED esperando."
   tiempoEntreLetras: 0.02
   tieneMision: 1
   mision: {fileID: 11400000, guid: 1ec6abf9dd06c024bb2521f2c297eda2, type: 2}

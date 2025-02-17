@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Dialogo2
   m_EditorClassIdentifier: 
   frases:
-  - Hola aventurero, te esperan grandes aventuras.
-  - Neceisto que encuentres unas setas malvadas, para curar la artrosis de mi abuela.
+  - Hola aventurero, mi hermano se perdio dentro de las cavernas encuentrale por
+    favor.
+  - Pero ten cuidao hay un necrofago patrullando la zona.
   - Gracias aventurero.
   tiempoEntreLetras: 0.02
-  tieneMision: 1
+  tieneMision: 0
   mision: {fileID: 11400000, guid: 1ec6abf9dd06c024bb2521f2c297eda2, type: 2}

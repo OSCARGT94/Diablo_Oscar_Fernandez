@@ -13,6 +13,7 @@ public class Enemigo : MonoBehaviour
     public Image barritadeVIda;
 
     public float vidaActual;
+    public float DanhoRecibido;
 
     public float vidaMaxima;
 
@@ -54,9 +55,13 @@ public class Enemigo : MonoBehaviour
     {
         if (other.CompareTag("GolpeEspada"))
         {
-            vidaActual -= 10;
+            vidaActual -= DanhoRecibido;
             golpeadoEnemigo++;
         }
+    }
+    public void destruir()
+    {
+        Destroy(gameObject);
     }
 
 }

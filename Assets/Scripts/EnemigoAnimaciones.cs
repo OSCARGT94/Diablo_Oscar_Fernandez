@@ -36,8 +36,8 @@ public class EnemigoAnimaciones : MonoBehaviour
         }
         
     }
-    public void destruir()
+    public void LLamarDestruccion()
     {
-        Destroy(gameObject);
+        enemigo.destruir();
     }
 }
